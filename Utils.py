@@ -1,4 +1,8 @@
-import _pickle as cPickle
+#-*- coding：utf-8 -*-
+try:
+    import cPickle
+except:
+    import _pickle as cPickle
 import random
 import string
 
