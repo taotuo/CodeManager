@@ -134,7 +134,8 @@ def main():
                 print('Dict initialization fails')
                 break
 
-            encode_worker = PMG_NoDES(Pwd, Encoder=True, K=1, W=W)
+            K = input('Please input encoded passwords complexity(int:1-9):')
+            encode_worker = PMG_NoDES(Pwd, Encoder=True, K=int(K), W=W)
             gdmm = encode_worker.Operation('UDict')
             Check = input('Please input Y/y to indicate whether to check decoded password:')
             if Check == 'Y' or Check == 'y':
